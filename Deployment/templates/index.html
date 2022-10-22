@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% block content %}
+  <title>
+    Airport
+  </title>
+  <style>
+    label {
+      font-size: 15px;
+      color: rgb(125, 150, 171);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 940px;
+      padding: 0 10px;
+    }
+
+    .footer {
+      background-color: #6aa1b2;
+      color: #fff;
+      padding: 30px 0;
+    }
+
+    .footer p {
+      font-family: 'Raleway', sans-serif;
+      text-transform: uppercase;
+      font-size: 15px;
+    }
+
+    input {
+      width: 200px;
+      height: 20px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: var(--darkgray);
+    }
+
+    select {
+      width: 200px;
+      border-radius: 5px;
+    }
+
+    option {
+      font-size: 15px;
+    }
+
+    option:hover {
+      color: rgb(161, 228, 228);
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 15%;
+    }
+
+    #submit {
+      width: 200px;
+      height: 50px;
+      padding: 5px;
+      color: black;
+      font-size: 15px;
+      font-weight: bold;
+      background-color: rgb(54, 139, 209);
+      cursor: pointer;
+      margin-left: 90%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      -o-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    body {
+      font-family: "Roboto", Helvetica, Arial, sans-serif;
+      font-weight: 100;
+      font-size: 12px;
+      color: #777;
+      background-image: url('{{ url_for("static",filename="images/plane3.jpg")}}');background-repeat: no-repeat;
+    }
+    .container {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 10%;
+      position: relative;
+    }
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact input[type="tel"],
+    #contact input[type="url"],
+    #contact textarea,
+    #contact button[type="submit"] {
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+    }
+
+    #contact {
+      background: #F9F9F9;
+      padding: 25px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+    #contact h3 {
+      display: block;
+      font-size: 30px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+    #contact h4 {
+      margin: 5px 0 15px;
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    fieldset {
+      border: medium none !important;
+      margin: 0 0 10px;
+      min-width: 100%;
+      padding: 0;
+      width: 100%;
+    }
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact input[type="tel"],
+    #contact input[type="url"],
+    #contact input[type="number"],
+    #contact input[type="decimal"],
+    #contact select,
+    #contact textarea {
+      width: 100%;
+      border: 1px solid #ccc;
+      background: #FFF;
+      margin: 0 0 5px;
+      padding: 20px;
+
+    }
+    #contact input[type="text"]:hover,
+    #contact input[type="email"]:hover,
+    #contact input[type="tel"]:hover,
+    #contact input[type="url"]:hover,
+    #contact input[type="number"],
+    #contact input[type="deciaml"],
+    #contact select,
+    #contact textarea:hover {
+      -webkit-transition: border-color 0.3s ease-in-out;
+      -moz-transition: border-color 0.3s ease-in-out;
+      transition: border-color 0.3s ease-in-out;
+      border: 1px solid #aaa;
+    }
+    #contact textarea {
+      height: 100px;
+      max-width: 100%;
+      resize: none;
+    }
+    #contact button[type="submit"] {
+      cursor: pointer;
+      width: 100%;
+      border: none;
+      background: gray;
+      color: #FFF;
+      margin: 0 0 5px;
+      padding: 10px;
+      font-size: 15px;
+    }
+    #contact button[type="submit"]:hover {
+      background: #6aa1b2;
+      -webkit-transition: 0.3s ease-in-out;
+      -moz-transition: 0.3s ease-in-out;
+      transition: background-color 0.3s ease-in-out;
+    }
+    #contact button[type="submit"]:active {
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    .copyright {
+      text-align: center;
+    }
+    #contact input:focus,
+    #contact textarea:focus {
+      outline: 0;
+      border: 1px solid #aaa;
+    }
+    ::-webkit-input-placeholder {
+      color: #888;
+    }
+    :-moz-placeholder {
+      color: #888;
+    }
+    ::-moz-placeholder {
+      color: #888;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <header style="background-color: #6aa1b2;display: flex; padding: 20px 0;">
+    <div style="margin-left:20px;color:white;position: relative;">
+      <img src="{{ url_for('static',filename='images/plane.png') }}" style="width: 100px;" />
+      {% endblock  %}
+
+      <p style="margin-left: 100px; font-size: 30px;font-family: 'Raleway', sans-serif;
+      text-transform: uppercase;">AirPort</p>
+    </div>
+  </header>
+  <div class="container">
+    <form id="contact" action="{{ url_for('predict')}}" method="post">
+      <h3>AirPort Form</h3>
+      <h4>Contact us for custom quote</h4>
+      <fieldset>
+        <label for="month"> Day of month</label>
+        <input type="number" placeholder="Enter..." min=1 max=31 name="month" required="required" /><br><br>
+      </fieldset>
+      <fieldset>
+        <label for="week"> Day of week</label>
+        <input type="number" placeholder="Enter..." min=1 max=7 name="week" required="required" /><br><br>
+      </fieldset>
+      <fieldset>
+        <label for="Airport"> Airport code</label>
+        <select name="Airport" id="Airport_code" required="required"><br><br>
+        </select>
+      </fieldset>
+      <fieldset>
+        <label for="ORIGIN"> Origin</label>
+        <select name="ORIGIN" id="origin" required="required"><br><br>
+        </select>
+      </fieldset>
+      <fieldset>
+        <label for="Dest"> Destination</label>
+        <select name="dest_code" id="dest" required><br><br>
+        </select>
+
+      </fieldset>
+
+      <fieldset>
+        <label for="dtime">Departure time</label>
+        <input type="decimal" placeholder="Enter..." name="departure time" min=0 required="required"/><br><br>
+      </fieldset>
+
+      <fieldset>
+        <label for="btime">Dep time block</label>
+        <select name="btime_code" id="btime" required="required"><br><br></select>
+
+      </fieldset>
+      <fieldset>
+        <label for="atime">Arrival time</label>
+        <input type="decimal" placeholder="Enter..." name="arrival" min=0 required="required" /><br><br>
+
+      </fieldset>
+      <fieldset>
+        <label for="distance"> Distance</label>
+        <input type="decimal" placeholder="Enter..." name="distance" min=0 required="required" /><br><br>
+
+      </fieldset>
+      <fieldset>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      </fieldset>
+      <fieldset>
+      <h1>{{ prediction_text }}<h1>
+      </fieldset>
+    </form>
+    
+  </div>
+  <div class="footer">
+    <div class="container">
+      <p>&copy;AirPort 2022</p>
+    </div>
+  </div>
+  <script>
+    function refaay(id, lst) {
+      let select = document.getElementById(id)
+      for (let i = 0; i < lst.length; i++) {
+        let op = document.createElement("option")
+        op.setAttribute("value", `${i}`)
+        op.innerText = lst[i]
+        select.appendChild(op)
+    }
+  }
+    refaay("Airport_code", ['9E','AA','AS','B6','DL','EV','F9','G4','HA','MQ','NK','OH','OO','UA','WN','YV','YX'])
+    refaay("origin", ['ABE','ABI','ABQ','ABR','ABY','ACT','ACV','ACY','ADK','ADQ','AEX','AGS','ALB','ALO','AMA','ANC','APN','ART','ASE','ATL','ATW','AUS','AVL','AVP','AZA','AZO','BDL','BET','BFF','BFL','BGM','BGR','BHM','BIL','BIS','BJI','BLI','BLV','BMI','BNA','BOI','BOS','BPT','BQK','BQN','BRD','BRO','BRW','BTM','BTR','BTV','BUF','BUR','BWI','BZN','CAE','CAK','CDC','CDV','CGI','CHA','CHO','CHS','CID','CIU','CKB','CLE','CLL','CLT','CMH','CMI','CMX','CNY','COD','COS','COU','CPR','CRP','CRW','CSG','CVG','CWA','CYS','DAB','DAL','DAY','DBQ','DCA','DEN','DFW','DHN','DLH','DRO','DRT','DSM','DTW','DVL','EAR','EAU','ECP','EGE','EKO','ELM','ELP','ERI','ESC','EUG','EVV','EWN','EWR','EYW','FAI','FAR','FAT','FAY','FCA','FLG','FLL','FNT','FSD','FSM','FWA','GCC','GCK','GEG','GFK','GGG','GJT','GNV','GPT','GRB','GRI','GRK','GRR','GSO','GSP','GTF','GTR','GUC','GUM','HDN','HGR','HHH','HIB','HLN','HNL','HOB','HOU','HPN','HRL','HSV','HTS','HVN','HYS','IAD','IAG','IAH','ICT','IDA','ILM','IMT','IND','INL','ISN','ISP','ITH','ITO','JAC','JAN','JAX','JFK','JLN','JMS','JNU','KOA','KTN','LAN','LAR','LAS','LAW','LAX','LBB','LBE','LBF','LBL','LCH','LCK','LEX','LFT','LGA','LGB','LIH','LIT','LNK','LRD','LSE','LWB','LWS','LYH','MAF','MBS','MCI','MCO','MDT','MDW','MEI','MEM','MFE','MFR','MGM','MHK','MHT','MIA','MKE','MKG','MLB','MLI','MLU','MMH','MOB','MOT','MQT','MRY','MSN','MSO','MSP','MSY','MTJ','MYR','OAJ','OAK','OGD','OGG','OGS','OKC','OMA','OME','ONT','ORD','ORF','ORH','OTH','OTZ','OWB','PAH','PBG','PBI','PDX','PGD','PHF','PHL','PHX','PIA','PIB','PIE','PIH','PIT','PLN','PNS','PPG','PRC','PSC','PSE','PSG','PSM','PSP','PUB','PVD','PVU','PWM','RAP','RDD','RDM','RDU','RFD','RHI','RIC','RKS','RNO','ROA','ROC','ROW','RST','RSW','SAF','SAN','SAT','SAV','SBA','SBN','SBP','SCC','SCE','SCK','SDF','SEA','SFB','SFO','SGF','SGU','SHD','SHV','SIT','SJC','SJT','SJU','SLC','SLN','SMF','SMX','SNA','SPI','SPN','SPS','SRQ','STC','STL','STS','STT','STX','SUN','SUX','SWF','SWO','SYR','TLH','TOL','TPA','TRI','TTN','TUL','TUS','TVC','TWF','TXK','TYR','TYS','UIN','USA','VEL','VLD','VPS','WRG','XNA','YAK','YUM'])
+    refaay("dest",['ABE','ABI','ABQ','ABR','ABY','ACT','ACV','ACY','ADK','ADQ','AEX','AGS','ALB','ALO','AMA','ANC','APN','ART','ASE','ATL','ATW','AUS','AVL','AVP','AZA','AZO','BDL','BET','BFF','BFL','BGM','BGR','BHM','BIL','BIS','BJI','BLI','BLV','BMI','BNA','BOI','BOS','BPT','BQK','BQN','BRD','BRO','BRW','BTM','BTR','BTV','BUF','BUR','BWI','BZN','CAE','CAK','CDC','CDV','CGI','CHA','CHO','CHS','CID','CIU','CKB','CLE','CLL','CLT','CMH','CMI','CMX','CNY','COD','COS','COU','CPR','CRP','CRW','CSG','CVG','CWA','CYS','DAB','DAL','DAY','DBQ','DCA','DEN','DFW','DHN','DLH','DRO','DRT','DSM','DTW','DVL','EAR','EAU','ECP','EGE','EKO','ELM','ELP','ERI','ESC','EUG','EVV','EWN','EWR','EYW','FAI','FAR','FAT','FAY','FCA','FLG','FLL','FNT','FSD','FSM','FWA','GCC','GCK','GEG','GFK','GGG','GJT','GNV','GPT','GRB','GRI','GRK','GRR','GSO','GSP','GTF','GTR','GUC','GUM','HDN','HGR','HHH','HIB','HLN','HNL','HOB','HOU','HPN','HRL','HSV','HTS','HVN','HYS','IAD','IAG','IAH','ICT','IDA','ILM','IMT','IND','INL','ISN','ISP','ITH','ITO','JAC','JAN','JAX','JFK','JLN','JMS','JNU','KOA','KTN','LAN','LAR','LAS','LAW','LAX','LBB','LBE','LBF','LBL','LCH','LCK','LEX','LFT','LGA','LGB','LIH','LIT','LNK','LRD','LSE','LWB','LWS','LYH','MAF','MBS','MCI','MCO','MDT','MDW','MEI','MEM','MFE','MFR','MGM','MHK','MHT','MIA','MKE','MKG','MLB','MLI','MLU','MMH','MOB','MOT','MQT','MRY','MSN','MSO','MSP','MSY','MTJ','MYR','OAJ','OAK','OGD','OGG','OGS','OKC','OMA','OME','ONT','ORD','ORF','ORH','OTH','OTZ','OWB','PAH','PBG','PBI','PDX','PGD','PHF','PHL','PHX','PIA','PIB','PIE','PIH','PIT','PLN','PNS','PPG','PRC','PSC','PSE','PSG','PSM','PSP','PUB','PVD','PVU','PWM','RAP','RDD','RDM','RDU','RFD','RHI','RIC','RKS','RNO','ROA','ROC','ROW','RST','RSW','SAF','SAN','SAT','SAV','SBA','SBN','SBP','SCC','SCE','SCK','SDF','SEA','SFB','SFO','SGF','SGU','SHD','SHV','SIT','SJC','SJT','SJU','SLC','SLN','SMF','SMX','SNA','SPI','SPN','SPS','SRQ','STC','STL','STS','STT','STX','SUN','SUX','SWF','SWO','SYR','TLH','TOL','TPA','TRI','TTN','TUL','TUS','TVC','TWF','TXK','TYR','TYS','UIN','USA','VEL','VLD','VPS','WRG','XNA','YAK','YUM'])
+    refaay("btime", ['0001-0559','0600-0659','0700-0759','0800-0859','0900-0959','1000-1059','1100-1159','1200-1259','1300-1359','1400-1459','1500-1559','1600-1659','1700-1759','1800-1859','1900-1959','2000-2059','2100-2159','2200-2259','2300-2359'])
+  </script>
+</body>
+</html>
